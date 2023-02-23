@@ -30,4 +30,16 @@
     </div>
 
 </body>
+<script>
+  // Push an event to the dataLayer when the page loads
+  dataLayer.push({
+    'event': 'pageLoaded'
+  });
+
+  // Add a listener to the dataLayer to receive GTM tags
+  dataLayer.push(function() {
+    // This function will be executed when a new tag is pushed to the dataLayer
+    console.log('New GTM tag received:', arguments);
+  });
+</script>
 </html>
