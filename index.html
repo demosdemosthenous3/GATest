@@ -8,6 +8,7 @@
     'https://data.mywbportal.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-PS7VLSR');</script>
   <!-- End Google Tag Manager -->
+  <script src="tinymce_6.3.2/tinymce/js/tinymce/tinymce.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,6 +28,7 @@
     <div class="container">
 
         <p>Lurem ipsum</p>
+		<textarea id="myTextarea"></textarea>
     </div>
 
 </body>
@@ -41,5 +43,16 @@
     // This function will be executed when a new tag is pushed to the dataLayer
     console.log('New GTM tag received:', arguments);
   });
+</script>
+<script>
+	tinymce.init({
+		selector: "#myTextarea",
+    plugins: "autolink link anchor",
+    toolbar: "anchor",
+    tollbar_sticky: true,
+    linklist: [],
+    
+		
+	});
 </script>
 </html>
